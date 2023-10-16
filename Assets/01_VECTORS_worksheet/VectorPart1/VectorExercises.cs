@@ -41,11 +41,41 @@ public class VectorExercises : MonoBehaviour
 
     void Question2a()
     {
+        //set the start and end points in the vector 
+        startPt = new Vector2(0, 0);
+        endPt = new Vector2(2, 3);
 
+        //draw the line between the 2 points 
+        drawnLine = lineFactory.GetLine(startPt, endPt, 0.02f, Color.black);
+
+        drawnLine.EnableDrawing(true);
+
+        //set vector as end point minus start point so that the vector we get 
+        //will always start at the origin 
+        Vector2 vec2 = endPt - startPt;
+        //debug log the magnitude of the vector
+        Debug.Log("Magnitude = " + vec2.magnitude);
     }
 
     void Question2b(int n)
     {
+        maxX = 5;
+        maxY = 5;
+        for(int i = 0; i < n; i++)
+        {
+            startPt = new Vector2(
+                Random.Range(-maxX, maxX),
+                Random.Range(-maxY, maxY));
+
+            endPt = new Vector2(
+                Random.Range(-maxX, maxX),
+                Random.Range(-maxY, maxY));
+
+            drawnLine = lineFactory.GetLine(
+                startPt, endPt, 0.02f, Color.black);
+
+            drawnLine.EnableDrawing(true);
+        }
 
     }
 

@@ -12,7 +12,7 @@ public class VectorExercises : MonoBehaviour
     private Vector2 endPt;
 
     public float GameWidth, GameHeight;
-    private float minX, minY, maxX, maxY;
+    private float minX, minY, minZ, maxX, maxY, maxZ;
 
     private void Start()
     {
@@ -86,25 +86,28 @@ public class VectorExercises : MonoBehaviour
 
     void Question2d()
     {
-
+        DebugExtension.DebugArrow(
+          new Vector3(0, 0, 0),
+          new Vector3(5, 5, 0),
+          Color.red,
+          60f);
     }
 
     void Question2e(int n)
     {
         for (int i = 0; i < n; i++)
         {
-            startPt = new Vector2(
+            endPt = new Vector3(
                 Random.Range(-maxX, maxX), 
-                Random.Range(-maxY, maxY));
+                Random.Range(-maxY, maxY),
+                Random.Range(-maxZ, maxZ));
 
-            // Your code here
-            // ...
 
-            //DebugExtension.DebugArrow(
-            //    new Vector3(0, 0, 0),
-            //    // Your code here,
-            //    Color.white,
-            //    60f);
+            DebugExtension.DebugArrow(
+            new Vector3(0, 0, 0),
+            endPt,
+            Color.red,
+            60f);
         }  
     }
 

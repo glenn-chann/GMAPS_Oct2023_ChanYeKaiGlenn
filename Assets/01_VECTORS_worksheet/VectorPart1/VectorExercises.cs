@@ -16,6 +16,7 @@ public class VectorExercises : MonoBehaviour
 
     private void Start()
     {
+        CalculateGameDimensions();
         if (Q2a)
             Question2a();
         if (Q2b)
@@ -36,7 +37,13 @@ public class VectorExercises : MonoBehaviour
 
     public void CalculateGameDimensions()
     {
+        GameHeight = Camera.main.orthographicSize * 2f;
+        GameWidth = Camera.main.aspect * GameHeight;
 
+        maxX = GameWidth / 2;
+        maxY = GameHeight / 2;
+        minX = -maxX;
+        minY = -maxY;
     }
 
     void Question2a()
@@ -59,8 +66,6 @@ public class VectorExercises : MonoBehaviour
 
     void Question2b(int n)
     {
-        maxX = 5;
-        maxY = 5;
         for(int i = 0; i < n; i++)
         {
             startPt = new Vector2(

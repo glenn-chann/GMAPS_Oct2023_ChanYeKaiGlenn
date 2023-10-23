@@ -71,20 +71,15 @@ public class HVector2D
         return new HVector2D(x / mag, y / mag);
     }
 
-    //public float DotProduct(/*???*/)
-    //{
+    public float DotProduct(HVector2D vec)
+    {
+        return (x * vec.x + y * vec.y);
+    }
 
-    //}
-
-    // public HVector2D Projection(/*???*/)
-    // {
-
-    // }
-
-    // public float FindAngle(/*???*/)
-    // {
-
-    // }
+    public float FindAngle(HVector2D vec)
+    {
+        return (float)Mathf.Acos(DotProduct(vec)/(Magnitude()* vec.Magnitude()));
+    }
 
     public Vector2 ToUnityVector2()
     {

@@ -304,7 +304,7 @@ MonoBehaviour:
   Q2e: 0
   Q3a: 0
   Q3b: 0
-  Q3c: 1
-  projection: 0
+  Q3c: 0
+  projection: 1
   GameWidth: 0
   GameHeight: 0

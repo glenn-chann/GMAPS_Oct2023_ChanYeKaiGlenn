@@ -23,12 +23,17 @@ public class Mario : MonoBehaviour
         moveDir = new Vector3(gravityDir.y, - gravityDir.x, 0f);
         moveDir = moveDir.normalized * -1f;
 
-        rb.AddForce(moveDir + gravityDir);
+        rb.AddForce(moveDir * force);
 
-        gravityNorm = gravityDir.normalized * gravityStrength;
+        gravityNorm = gravityDir.normalized;
         rb.AddForce(gravityNorm * gravityStrength);
 
-        float angle = Vector3.SignedAngle(,,Vector3.forward);
+        float angle = Vector3.SignedAngle(-Vector3.up,gravityNorm,Vector3.forward);
+
+        rb.MoveRotation(Quaternion.Euler(0,0,angle));
+
+        DebugExtension.DebugArrow(transform.position, gravityDir, Color.red);
+        DebugExtension.DebugArrow(transform.position, moveDir, Color.blue);
     }
 }
 

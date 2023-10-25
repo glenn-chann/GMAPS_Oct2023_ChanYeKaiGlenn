@@ -151,6 +151,7 @@ public class VectorExercises : MonoBehaviour
 
     public void Projection()
     {
+        //projection
         HVector2D a = new HVector2D(0, 0);
         HVector2D b = new HVector2D(6, 0);
         HVector2D c = new HVector2D(2, 2);

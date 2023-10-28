@@ -70,8 +70,7 @@ public class Player : MonoBehaviour
     {
         if (IsCaptain)
         {
-             
-            DebugExtension.DebugArrow(transform.position,OtherPlayer.transform.position,60f);
+            DebugExtension.DebugArrow(transform.position,OtherPlayer.transform.position,Color.black);
         }
     }
 }

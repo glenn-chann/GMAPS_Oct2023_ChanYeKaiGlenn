@@ -70,8 +70,8 @@ public class Player : MonoBehaviour
     {
         if (IsCaptain)
         {
-            //float angle = // Your code here
-            //Debug.Log(angle);
+             
+            DebugExtension.DebugArrow(transform.position,OtherPlayer.transform.position,60f);
         }
     }
 }

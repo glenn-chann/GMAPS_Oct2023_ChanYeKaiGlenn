@@ -30,7 +30,7 @@ public class GravityPoint : MonoBehaviour
 
         if (obj.CompareTag("Player"))
         {
-            obj.transform.up = Vector2.MoveTowards(obj.transform.up, -dir, gravityScale * Time.deltaTime +90f);
+            obj.transform.up = Vector2.MoveTowards(obj.transform.up, -dir, gravityScale * Time.deltaTime);
         }
     }
 }

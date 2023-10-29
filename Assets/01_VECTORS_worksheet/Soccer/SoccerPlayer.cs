@@ -15,8 +15,13 @@ public class SoccerPlayer : MonoBehaviour
 
     private void Start()
     {
-        OtherPlayers = FindObjectsOfType<SoccerPlayer>().Where(t => t != this).ToArray();
+        if (IsCaptain)
+        {
+            //FindMinimum();
+            OtherPlayers = FindObjectsOfType<SoccerPlayer>().Where(t => t != this).ToArray();
+        }
     }
+
 
     //float magnitude(vector3 vector)
     //{
@@ -35,27 +40,54 @@ public class SoccerPlayer : MonoBehaviour
 
     SoccerPlayer findclosestplayerdot()
     {
-       
+        SoccerPlayer closest = null;
+        float minAngle = 180f;
+
+        for (int i = 0; i < OtherPlayers.Length; i++)
+        {
+            Vector3 toPlayer = OtherPlayers[i].transform.position - transform.position;
+            toPlayer = toPlayer.normalized;
+
+            float dot = Vector3.Dot(transform.forward, toPlayer);
+            float angle = Mathf.Acos(dot);
+            angle = angle * Mathf.Rad2Deg;
+
+            if (angle < minAngle)
+            {
+                minAngle = angle;
+                closest = OtherPlayers[i];
+            }
+        }
+        return closest;
     }
 
     void drawvectors()
     {
         foreach (SoccerPlayer other in OtherPlayers)
         {
-            for (int i = 0; i <= OtherPlayers.Length - 1; i++)
-            {
-                if (OtherPlayers[i].gameObject.name == "Captain")
-                {
-                    return;
-                }
-                else
-                { 
-                    SoccerPlayer player = OtherPlayers[i];
-                    Debug.DrawLine(player.transform.position, other.transform.position);
-                }
-            }
+            Debug.DrawRay(transform.position, (other.transform.position - transform.position), Color.black);
         }
     }
+
+    //void FindMinimum()
+    //{
+    //    float Min = 5f;
+    //    float Max = 20f;
+    //    float Smallest = Min - 1f;
+
+    //    for(int i =0; i<10; i++)
+    //    {
+    //        float height = Random.Range(Min,Max);
+    //        Debug.Log(height);
+
+    //        if (height < Smallest || i == 0)
+    //        {
+    //            Smallest = height;
+    //        }
+    //    }
+
+    //    Debug.Log("smallest =" + Smallest);
+    //}
 
     void Update()
     {
@@ -69,7 +101,17 @@ public class SoccerPlayer : MonoBehaviour
         }
 
         drawvectors();
+
+        SoccerPlayer targetPlayer = findclosestplayerdot();
+        Debug.Log("yes" + targetPlayer);
+        targetPlayer.GetComponent<Renderer>().material.color = Color.green;
+
+        foreach (SoccerPlayer other in OtherPlayers.Where(t => t != targetPlayer))
+        {
+            other.GetComponent<Renderer>().material.color = Color.white;
+        }
     }
 }
+
 
 

@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec4ae6e73e98bd4f8c3ef78a9da9bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityScale: 12
+  gravityScale: 1000
   planetRadius: 2
   gravityMinRange: 2
   gravityMaxRange: 4

@@ -8,11 +8,13 @@ public class HMatrix2D
 {
     public float[,] Entries { get; set; } = new float[3, 3];
 
+    //creating a 3x3 matrix with all the elements as 0 
     public HMatrix2D()
     {
         for (int y = 0; y < 3; y++) //rows 
             for (int x = 0; x < 3; x++) //columns
             {
+                //set the element to 0 
                 Entries[x, y] = 0; 
             }
     }
@@ -32,6 +34,7 @@ public class HMatrix2D
             }
     }
 
+    //creating a 3x3  matrix using the values given 
     public HMatrix2D(float m00, float m01, float m02,
              float m10, float m11, float m12,
              float m20, float m21, float m22)
@@ -52,47 +55,45 @@ public class HMatrix2D
         Entries[2, 2] = m22;
     }
 
+    //overloading the + operator to add 2 HMatrix2Ds together 
     public static HMatrix2D operator +(HMatrix2D left, HMatrix2D right)
     {
-        if (left == null)
-            throw new ArgumentNullException(nameof(left));
-        if (right == null)
-            throw new ArgumentNullException(nameof(right));
-
-        if (left.Entries.GetLength(0) != 3 || left.Entries.GetLength(1) != 3)
-            throw new ArgumentNullException(nameof(left));
-
-        if (right.Entries.GetLength(0) != 3 || right.Entries.GetLength(1) != 3)
-            throw new ArgumentNullException(nameof(right));
-
+        //create a multi dimensional array 
         float[,] add = { };
         for (int y = 0; y < 3; y++) //rows 
             for (int x = 0; x < 3; x++) //columns
             {
-                add[y, x] = left.Entries[y, x] + right.Entries[y, x];
+                add[y, x] = left.Entries[y, x] + right.Entries[y, x]; //add the elements of the left and right matrix and add it to the multi dimensional array 
             }
+        //return the result of running the HMatrix2D function passing the add multi dimensional array as an argument 
         return new HMatrix2D(add);
     }
 
+    //overloading the - operator to subtract 2 HMatrix2Ds from each other
     public static HMatrix2D operator -(HMatrix2D left, HMatrix2D right)
     {
+        //create a multi dimensional array 
         float[,] sub = { };
         for (int y = 0; y < 3; y++) //rows 
             for (int x = 0; x < 3; x++) //columns
             {
-                sub[y, x] = left.Entries[y, x] - right.Entries[y, x];
+                sub[y, x] = left.Entries[y, x] - right.Entries[y, x]; //subtract the elements of the left and right matrix and add it to the multi dimensional array 
             }
+        //return the result of running the HMatrix2D function passing the add multi dimensional array as an argument 
         return new HMatrix2D(sub);
     }
 
+    //overloading the * operator to multiply a HMatrix2D by a scalar value 
     public static HMatrix2D operator *(HMatrix2D left, float scalar)
     {
+        //create a multi dimensional array 
         float[,] multi = { };
         for (int y = 0; y < 3; y++) //rows 
             for (int x = 0; x < 3; x++) //columns
             {
-                multi[y, x] = left.Entries[y, x] * scalar;
+                multi[y, x] = left.Entries[y, x] * scalar; //multiply the left matrix by the scalar value and add it to the multi dimensional array 
             }
+        //return the result of running the HMatrix2D function passing the multi multi dimensional array as an argument 
         return new HMatrix2D(multi);
     }
 
@@ -127,22 +128,24 @@ public class HMatrix2D
     //);
     //}
 
+    //overloading the == operator to check if 2 HMatrix2Ds are equal
     public static bool operator ==(HMatrix2D left, HMatrix2D right)
     {
         for (int y = 0; y < 3; y++) //rows 
             for (int x = 0; x < 3; x++) //columns
-                if (left.Entries[y, x] != right.Entries[y, x])
-                    return false;
-        return true;            
+                if (left.Entries[y, x] != right.Entries[y, x]) //if any element in the left matrix is not the same as it's respective element in the right matrix 
+                    return false; //return false
+        return true;//return true if all elements are the same   
     }
 
+    //overloading the != operator to check if 2 HMatrix2Ds are not equal 
     public static bool operator !=(HMatrix2D left, HMatrix2D right)
     {
         for (int y = 0; y < 3; y++) //rows 
             for (int x = 0; x < 3; x++) //columns
-                if (left.Entries[y, x] != right.Entries[y, x])
-                    return true;
-        return false;
+                if (left.Entries[y, x] != right.Entries[y, x])//if any element in the left matrix is not the same as it's respective element in the right matrix 
+                    return true;//return true 
+        return false; //return false 
     }
 
     //public override bool Equals(object obj)
@@ -182,9 +185,9 @@ public class HMatrix2D
         //    }
         //}
 
-        for (int y = 0; y<3; y++)
-            for(int x = 0; x<3; x++)
-                Entries[y, x] = x == y ? 1 : 0;
+        for (int y = 0; y<3; y++) //rows
+            for(int x = 0; x<3; x++) //columns 
+                Entries[y, x] = x == y ? 1 : 0; //if x is equal to y it means this element falls on the diagonal thus we set its value to 1 
     }
 
     //public void setTranslationMat(float transX, float transY)
@@ -202,6 +205,7 @@ public class HMatrix2D
     //    // your code here
     //}
 
+    //printing the matrix to the console 
     public void Print()
     {
         string result = "";

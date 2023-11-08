@@ -1,0 +1,17 @@
+Vectors Worksheet
+
+Q1(a)
+when iam playing cs2 and we are using grenades in game, the game has to calculate all the vectors that will influence the grenade's trajectory. for example if the player is running forward that adds an extra forward vector to the grenade's vector, if the player jumps it will increase the upward vector of the grenade.
+
+Q1(b)
+gravity is a constant force that draws an object toward the centre of any celestial bodies. the standard magnitude given for earth's gravity is 9.807m/s. 
+
+Q1(c)
+no the gravity vector is constantly changing. assuming that the origin is the centre of the planet, the gravity vector acting upon mario would look like this : the tail of the vector on mario and head of the vector on the centre of the planet. thus when mario runs around the planet the tail of the vector will constantly be changing thus the vector wont be the same for all the positions on the surface of the planet.
+
+Matrices Worksheet
+
+Q4(i)
+
+Q4(ii)
+

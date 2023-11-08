@@ -222,7 +222,7 @@ public class HMatrix2D
     //    return // your code here
     //}
 
-    public void setIdentity()
+    public void SetIdentity()
     {
         //for (int y = 0; y < 3; y++)
         //{
@@ -244,15 +244,22 @@ public class HMatrix2D
                 Entries[y, x] = x == y ? 1 : 0; //if x is equal to y it means this element falls on the diagonal thus we set its value to 1 
     }
 
-    //public void setTranslationMat(float transX, float transY)
-    //{
-    //    // your code here
-    //}
+    public void SetTranslationMatrix(float transX, float transY)
+    {
+        SetIdentity();
+        Entries[0, 2] = transX;
+        Entries[1, 2] = transY; 
+    }
 
-    //public void setRotationMat(float rotDeg)
-    //{
-    //    // your code here
-    //}
+    public void SetRotationMat(float rotDeg)
+    {
+        SetIdentity();
+        float rad = rotDeg * Mathf.Deg2Rad;
+        Entries[0, 0] = Mathf.Cos(rad);
+        Entries[0, 1] = - Mathf.Sin(rad);
+        Entries[1, 0] = Mathf.Sin(rad);
+        Entries[1, 1] = Mathf.Cos(rad);
+    }
 
     //public void setScalingMat(float scaleX, float scaleY)
     //{

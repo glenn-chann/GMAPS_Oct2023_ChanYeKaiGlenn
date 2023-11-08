@@ -113,4 +113,10 @@ public class HVector2D
     {
         return new Vector3(x, y, 0);
     }
+
+    //printing vector to console
+    public void Print()
+    { 
+        Debug.Log(x + " " + y);
+    }
 }

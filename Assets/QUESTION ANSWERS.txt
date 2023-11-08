@@ -12,6 +12,14 @@ no the gravity vector is constantly changing. assuming that the origin is the ce
 Matrices Worksheet
 
 Q4(i)
+line 27 getting MeshFilter component and setting it to the meshFilter variable
+line 28 setting the originalMesh variable to the shared mesh filter which is the actual mesh asset so all changes to the mesh will affect all objects that use that mesh as a reference. 
+line 29 setting the clonedMesh variable as a new mesh. 
+line 30 setting the mesh in the cloneMesh variable to have the name of clone
+line 31-35 setting all the varibles in cloneMesh to be the same as the originalMesh
+line 37 setting all the vertices in the clonedMesh into the vertices array
+line 38 setting all the triangles in the cloneMesh into the triangles array  
 
 Q4(ii)
+if you dont use clonedMesh any changes you make the original mesh will affect unity's default mesh because in line 28 we set the original mesh to equal to the shared mesh of the mesh filter.
 

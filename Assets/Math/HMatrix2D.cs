@@ -104,9 +104,9 @@ public class HMatrix2D
         return new HVector2D
         (
             //multiply the first row of the matrix by the x and y vector components and sum the products
-            left.Entries[0,0] * right.x + left.Entries[0,1] * right.y,
+            left.Entries[0,0] * right.x + left.Entries[0,1] * right.y + left.Entries[0,2] * right.h,
             //multiply the second row of the matrix by the x and y vector components and sum the products
-            left.Entries[1,0] * right.x + left.Entries[1,1] * right.y
+            left.Entries[1,0] * right.x + left.Entries[1,1] * right.y + left.Entries[0,2] * right.h
         );
     }
 

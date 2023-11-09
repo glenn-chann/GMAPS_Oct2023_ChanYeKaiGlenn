@@ -244,17 +244,25 @@ public class HMatrix2D
                 Entries[y, x] = x == y ? 1 : 0; //if x is equal to y it means this element falls on the diagonal thus we set its value to 1 
     }
 
+    //setting the translation matrix
     public void SetTranslationMatrix(float transX, float transY)
     {
+        //set an identity matrix
         SetIdentity();
+        //change the top right value to the amount needed to move in the x direction 
         Entries[0, 2] = transX;
+        //change the middle right value to the amount needed to move in the y direction 
         Entries[1, 2] = transY; 
     }
 
+    //setting rotation matrix
     public void SetRotationMat(float rotDeg)
     {
+        //set an identity matrix 
         SetIdentity();
+        //converting degrees to radians 
         float rad = rotDeg * Mathf.Deg2Rad;
+        //setting the values needed for the rotaion matrix 
         Entries[0, 0] = Mathf.Cos(rad);
         Entries[0, 1] = -Mathf.Sin(rad);
         Entries[1, 0] = Mathf.Sin(rad);

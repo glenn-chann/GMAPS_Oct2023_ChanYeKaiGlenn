@@ -25,36 +25,49 @@ public class TransformMesh : MonoBehaviour
         Rotate(45);
     }
 
-
+    //function to move the object
     void Translate(float x, float y)
     {
+        //set the transformMatrix to the identity matrix
         transformMatrix.SetIdentity();
+        //use the SetTranslationMatrix function we created in the HMatrix2D.cs to get the translation matrix 
         transformMatrix.SetTranslationMatrix(x, y);
         Transform();
 
+        //updating the position of the object
         pos = new HVector2D(x, y) + pos;
     }
 
+    //function to roatate the object
     void Rotate(float angle)
     {
+        //set the transformMatrix to the identity matrix 
         transformMatrix.SetIdentity();
+        //use the SetRotationMatrix function we created in the HMatrix2D.cs to get the rotation matrix
         transformMatrix.SetRotationMat(angle);
 
         Transform();
     }
 
+    //function to actually transform the object 
     private void Transform()
     {
+        //setting all the vertices in the objects into an array called vertices
         vertices = meshManager.clonedMesh.vertices;
 
+        //for loop that runs for the length of the vertices array
         for (int i = 0; i < vertices.Length; i++)
         {
+            //create a new Hvector2D using the vertex's value
             HVector2D vert = new HVector2D(vertices[i].x, vertices[i].y);
+            //move the vertex using the transformMatrix by multiplying it by the transformMatrix
             vert = transformMatrix * vert;
+            //set the new position of the vertex
             vertices[i].x = vert.x;
             vertices[i].y = vert.y;
         }
 
+        //set the object's mesh's vertices as the changed vertices.
         meshManager.clonedMesh.vertices = vertices;
     }
 }

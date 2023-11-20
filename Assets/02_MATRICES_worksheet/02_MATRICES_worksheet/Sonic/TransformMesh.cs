@@ -35,7 +35,7 @@ public class TransformMesh : MonoBehaviour
         Transform();
 
         //updating the position of the object
-        pos = new HVector2D(x, y) + pos;
+        pos = transformMatrix * pos;
     }
 
     //function to roatate the object

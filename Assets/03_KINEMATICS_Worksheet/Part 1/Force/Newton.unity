@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 489493125}
   - component: {fileID: 489493124}
   - component: {fileID: 489493123}
-  - component: {fileID: 489493122}
+  - component: {fileID: 489493127}
   m_Layer: 0
   m_Name: Ball2
   m_TagString: Untagged
@@ -227,19 +227,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &489493122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489493121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d110783f9df238a4db32c9ffd7ff852c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Velocity: {x: 3, y: 2, z: 4}
 --- !u!135 &489493123
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -318,6 +305,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &489493127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489493121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d110783f9df238a4db32c9ffd7ff852c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 5}
 --- !u!1 &759393637
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc88028541713ec4e916daf3b6eaeb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 3, y: 0, z: 0}
+  force: {x: 0, y: 0, z: 5}
 --- !u!135 &1742496531
 SphereCollider:
   m_ObjectHideFlags: 0

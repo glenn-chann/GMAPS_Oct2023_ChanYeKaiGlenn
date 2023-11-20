@@ -1,19 +1,19 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-// public class Motion : MonoBehaviour
-// {
-//     public Vector3 Velocity;
+public class Motion : MonoBehaviour
+{
+    public Vector3 velocity;
 
-//     void FixedUpdate()
-//     {
-//         float dt = Time.deltaTime;
+    void FixedUpdate()
+    {
+        float dt = Time.deltaTime;
 
-//         float dx = /*your code here*/ * dt;
-//         float dy = /*your code here*/;
-//         float dz = /*your code here*/;
+        float dx = velocity.x * dt;
+        float dy = velocity.y * dt;
+        float dz = velocity.z * dt;
 
-//         transform./*your code here*/(new Vector3(/*your code here*/));
-//     }
-// }
+        transform.Translate(new Vector3(dx,dy,dz));
+    }
+}

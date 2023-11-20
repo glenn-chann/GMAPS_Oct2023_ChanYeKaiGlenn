@@ -34,4 +34,11 @@ matrix concatenation. matrix concatenation is when you have a bunch of matrices 
 Q6(c)
 overall this worksheet has been very helpful in understanding matrices, it may just be me but i only really understood matrices when i started doing the worksheets. during class i would listen and be kinda confused about whats going on on the slides, i would kind of understand what mr douglas is saying but it is only when i started doing the worksheets, i truly understood the topic. not just the matrices worksheet i feel the same for the vectors one as well. i especially liked the questions where the code was blanked out and a hint was given, the hints helped me understand what each line of code i am writing in the function is suppose to do, yet i had to have the knowledge to complete the code myself. this was especially effective in helping me understand the code as i am both writing it myself and am knowing what the intended purpose of the code is, so i know if the code is correct or wrong. although i see the vector one relating more to game development i still dont understand how matrices are related (something about computer graphics) to it as it feels like i would never need to transform an object like this unless iam doing low-level coding. (213 words)
 
+Dynamics & Kinematics worksheet 
 
+Part 1 
+Yes it does follow Newton's First Law of motion because the object is moving at a constant speed and not accelerating or decelerating since there are no more forces acting upon it 
+
+Reflection
+
+(a)

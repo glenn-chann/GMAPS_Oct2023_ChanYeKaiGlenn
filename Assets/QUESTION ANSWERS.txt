@@ -42,3 +42,7 @@ Yes it does follow Newton's First Law of motion because the object is moving at 
 Reflection
 
 (a)
+The most difficult part of this worksheet i feel is the coding part although most of the code has been handfed to us it took me really long to understand what each line of code is suppose to do and therefore i dont know what iam suppose to write. there isnt really a way to overcome this, i just read the instructions and try to visualise what each line of code before it is doing to understand what i need to do in my code. i think i would have really prefered it if we just had one question but we had to code everything by ourselves, when given the code i often find myself comparing the length of the blanked out part to my own code to see if i got it right. because of this i might've missed out on a few ways to shorten the code. but i dont think this is feasible as there is more then 1 topic to teach and understand. 
+
+(b)
+

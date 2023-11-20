@@ -45,4 +45,58 @@ Reflection
 The most difficult part of this worksheet i feel is the coding part although most of the code has been handfed to us it took me really long to understand what each line of code is suppose to do and therefore i dont know what iam suppose to write. there isnt really a way to overcome this, i just read the instructions and try to visualise what each line of code before it is doing to understand what i need to do in my code. i think i would have really prefered it if we just had one question but we had to code everything by ourselves, when given the code i often find myself comparing the length of the blanked out part to my own code to see if i got it right. because of this i might've missed out on a few ways to shorten the code. but i dont think this is feasible as there is more then 1 topic to teach and understand. 
 
 (b)
+i will be trying to explain the conservation of angular momentum for my reflection. so to start what is angular momentum, angular momentum is defined as the product of the moment of inertia and angular velocity of an object. or in laymans terms how much "spinning energy" it has. 
+
+angular momentum can be experienced by objects in 2 situations, either a point object, which is an object that orbits around a fixed point, for example the earth around the sun. 
+
+where we use the formula L = r * p, 
+where,
+L is the angular momentum 
+r is the radius of the circle created by the fixed point's rotation path.
+p is the linear momentum (refer to slide 14 for linear momentum formula)
+
+or a extended object, which is rotating about a fixed point, for example the earth rotating about its own axis. 
+
+where we use the formula L = I * ω
+where
+L is the angular momentum 
+I is the moment of inertia 
+ω is the angular velocity 
+
+we also need to know the direction of this momentum, for that we use the right hand rule. use your right hand and make a thumbs up sign and line up the direction your fingers are pointing to the direction the object is rotating. the thumb will be pointing in the direction if the angular momentum. or for people who love to make life hard, a clockwise direction of rotation will result in an angular momentum pointing up along the axis upon which it is rotating. and a counter-clockwise direction of rotation will result in an angular momentum pointing down along the axis upong which it is rotating. 
+
+so what is conservation of angular momentum. Conservation of angular momentum is a physical property of a spinning system such that its spin remains constant unless it is acted upon by an external torque. to put it simply the angular momentum of something spinning will not change as long as it is not being affected by a external force. 
+
+how can we see it in action? ive got an examples.
+
+the classic ice skater example : an ice skater will start off their spin with arms stretched out and when they pull their arms in their angular velocity or the rate at which they spin increases. (watch this video to see it in action https://www.youtube.com/shorts/VmeM0BNnGR0?feature=share)
+
+why does this happen? conservation of angular momentum. 
+
+if we assume the ice skater has a wingspan of 1.4m and the radius of her body is 0.3m when arms are tucked in and has a mass of 70kg. and they spin at 5 radians per second with their arms stretched out, we can calculate the angular momentum. (moment of inertia formulas are different for different objects and there is no formula for an irregular object like a human body so i will be using the cylinder moment of inertia formula I = 1/2 * m * r^2. this will not change the fundemental concept behind this example) 
+
+calculate the moment of inertia of the human with her arms stretched out
+I = 1/2 * m * r^2
+I = 1/2 * 70kg * 0.7m^2 
+I = 17.15kgm^2
+
+calculate angular momentum 
+L = I * ω
+L = 17.15kgm^2 * 5 rad/s 
+L = 85.75kgm^2/s
+
+then we calculate the moment of inertia of the human with her arms tucked in 
+I = 1/2 * m * r^2
+I = 1/2 * 70kg 0.15m^2
+I = 5.25kgm^2 
+
+because the angular momentum should never change we use it together with our new inertia to calculate the speed at which the human will spin with her arms tucked in 
+L = I * ω
+85.75kgm^2/s = 5.25kgm^2 * ω
+ω = 85.75kgm^2/s / 5.25kgm^2
+ω ≈ 15.53442 rad/s
+
+so we can see because of the conservation of angular momentum when the ice skater tucks their arm in decreasing the moment of inertia, the angular velocity has to increase, resulting in them spinning faster.
+
+(c)
 

@@ -98,5 +98,12 @@ L = I * ω
 
 so we can see because of the conservation of angular momentum when the ice skater tucks their arm in decreasing the moment of inertia, the angular velocity has to increase, resulting in them spinning faster.
 
+References
+Bozeman Science. (2014, September 28). Angular momentum. YouTube. https://www.youtube.com/watch?v=MULe4xv3lVk&amp;t=348s&amp;ab_channel=BozemanScience 
+BYJU’S. (n.d.). Angular momentum - definition, units, formula, video, Right hand rule, examples and faqs. BYJUS. https://byjus.com/physics/angular-momentum/ 
+INDIUMcorporation. (2013, January 29). Figure skating - conservation of angular momentum. YouTube. https://www.youtube.com/shorts/VmeM0BNnGR0 
+Wikimedia Foundation. (2023a, October 28). Moment of inertia. Wikipedia. https://en.wikipedia.org/wiki/Moment_of_inertia 
+Wikimedia Foundation. (2023b, November 8). Angular momentum. Wikipedia. https://en.wikipedia.org/wiki/Angular_momentum 
+
 (c)
 

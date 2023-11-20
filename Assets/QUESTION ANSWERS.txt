@@ -63,7 +63,7 @@ L is the angular momentum
 I is the moment of inertia 
 ω is the angular velocity 
 
-we also need to know the direction of this momentum, for that we use the right hand rule. use your right hand and make a thumbs up sign and line up the direction your fingers are pointing to the direction the object is rotating. the thumb will be pointing in the direction if the angular momentum. or for people who love to make life hard, a clockwise direction of rotation will result in an angular momentum pointing up along the axis upon which it is rotating. and a counter-clockwise direction of rotation will result in an angular momentum pointing down along the axis upong which it is rotating. 
+we also need to know the direction of this momentum, for that we use the right hand rule. use your right hand and make a thumbs up sign and line up the direction your fingers are pointing to the direction the object is rotating. the thumb will be pointing in the direction of the angular momentum. or for people who love to make life hard, a clockwise direction of rotation will result in an angular momentum pointing up along the axis upon which it is rotating. and a counter-clockwise direction of rotation will result in an angular momentum pointing down along the axis upong which it is rotating. 
 
 so what is conservation of angular momentum. Conservation of angular momentum is a physical property of a spinning system such that its spin remains constant unless it is acted upon by an external torque. to put it simply the angular momentum of something spinning will not change as long as it is not being affected by a external force. 
 

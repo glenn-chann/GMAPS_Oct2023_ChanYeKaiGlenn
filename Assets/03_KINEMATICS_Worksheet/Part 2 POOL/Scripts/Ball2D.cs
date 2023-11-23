@@ -22,12 +22,14 @@ public class Ball2D : MonoBehaviour
         Radius = local_sprite_size.x / 2f;
     }
 
+    //function to check if mouse is colliding with the cue ball
     public bool IsCollidingWith(float x, float y)
     {
         float distance = Util.FindDistance(Position, new HVector2D(x,y));
         return distance <= Radius;
     }
 
+    //function to check if cue ball is collider with other balls
     public bool IsCollidingWith(Ball2D other)
     {
         float distance = Util.FindDistance(Position, other.Position);
@@ -39,14 +41,18 @@ public class Ball2D : MonoBehaviour
         UpdateBall2DPhysics(Time.deltaTime);
     }
 
+    //function to update the ball's position 
     private void UpdateBall2DPhysics(float deltaTime)
     {
+        //getting the displacement by using velocity over time 
         float displacementX = Velocity.x * deltaTime;
         float displacementY = Velocity.y * deltaTime;
 
-        Position.x += Velocity.x;
-        Position.y += Velocity.y;
+        //setting the position varible to be the displacement 
+        Position.x += displacementX;
+        Position.y += displacementY;
 
+        //moving the ball by setting its position to position.x and position.y
         transform.position = new Vector2(Position.x, Position.y);
     }
 }

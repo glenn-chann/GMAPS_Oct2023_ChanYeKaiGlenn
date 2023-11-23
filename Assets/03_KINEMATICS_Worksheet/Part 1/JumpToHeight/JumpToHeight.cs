@@ -19,7 +19,9 @@ public class JumpToHeight : MonoBehaviour
         // u = sqrt(v*v - 2as)
         // v = 0, u = ?, a = Physics.gravity, s = Height
 
+        //using the SUVAT formula to get height to jump
         float u = Mathf.Sqrt(-2 * Physics.gravity.y * Height);
+        //making the box jump using rb.velocity and changing the y value
         rb.velocity = new Vector3(0, u, 0);
 
         //float jumpForce = Mathf.Sqrt(-2 * Physics2D.gravity.y * Height);
@@ -28,6 +30,7 @@ public class JumpToHeight : MonoBehaviour
 
     private void Update()
     {
+        //if we press space call the jump function
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();

@@ -57,7 +57,7 @@ namespace Collision
 
                 // This is the physics part.
                 //
-                ball.Velocity = velocity * speedFactor;
+                ball.Velocity = new HVector2D(velocity * speedFactor);
                 drawnLine = null;
             }
 

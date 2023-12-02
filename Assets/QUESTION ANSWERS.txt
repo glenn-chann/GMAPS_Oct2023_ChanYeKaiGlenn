@@ -108,3 +108,13 @@ Wikimedia Foundation. (2023b, November 8). Angular momentum. Wikipedia. https://
 (c)
 overall this worksheet has been good as a refresher for physics. although the coding part of the worksheet was abit demotivating as i spent more time trying to piece together what line of code is suppose to do what then the actual coding itself. for the physics part of the worksheet, i believe it did help me refresh my memories for physics. the examples were relevant and i understood the physics concpet behind all of the questions. I feel that it would be better if we had more example questions and although i enjoy playing in the unity game engine to understand physics i feel like a normal physics worksheet with just physics questions would be a good complement to this. so like maybe a physics question where we have to do the calculations on pen and paper, then we go into unity and do the same to visualise the results. physics relates to game development on fundamental level although unity does most of the physics calculations behind the scenes for us nowadays.i believe it is still good to have an understanding of how basic physics as no matter how much you try to run from it, every game will involve physics one way or another. 
 
+COLLISIONS WORKSHEET
+
+Q3(b)
+this if statement basically checks if the ball is moving left or right a positive speedX would mean the ball is moving right and thus if a collision is detected on the x-axis walls it had to be with the right wall so on the frame we detect the collision we set the xpos to the rightwall - walloffset - ball radius to keep the ball within the playing field when ball speeds are high.
+
+Q3(c)
+basically what is happening is that you are defining the positions of the top, bottom, left and right of the ball before moving the ball, this will result in the collision detection being delayed. that is why you can see the ball going into the wall when colliding. the teleportation of the ball to the opposite wall is caused by the delay as well because the ball was allowed to travel into the wall and the position used to check for collisions is delayed this will result in collision being detected after changing the course of the ball and flipping the speed, causing the code to think the ball has collided with the opposite wall and "teleporting" it to the opposite wall to account for the collision before the transform.translate() in the fixed update moves it back to the correct position. this can be easily fixed by defining the position of the ball after moving the ball or if the ball is symmetrical simply add or minus the radius whereever neccessary. 
+
+
+
